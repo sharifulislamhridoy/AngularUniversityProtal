@@ -22,13 +22,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
 
-///**
-// *
-// * @author shari
-// */
+/**
+ *
+ * @author shari
+ */
+
 @Aspect
 @Component
-//@Configuration
 @EnableAspectJAutoProxy
 public class StudentAspact {
 
@@ -37,39 +37,29 @@ public class StudentAspact {
 
     @Before("execution( public * save())")
     public void beforePageLoad() {
-
         Audits audits = new Audits();
         audits.setAction("Save");
         audits.setTime("3:54");
         audits.setUsername("adminUser");
         audits.setRole("admin");
         audits.setEmail("admin@test.com");
-        Date dateObject = new Date();
-
-//        String fronEndDateString = dateObject
-//        SimpleDateFormat simpleDate = new SimpleDateFormat("yyyy-MM-dd");
-//        dateObject = simpleDate.parse(dateObject);
-//        trainee.setDate(dateObject);
         audits.setDate(new Date());
         auditsService.save(audits);
-        System.out.println("Student Aspect.............hit"+Instant.now());
-        System.out.println("Student Aspect.............hit"+dateObject);
+
 
     }
 
-//    @Before("execution( public * save())")
-//    public void beforeSave(Joinpoint jp) {
-//
-//        Audits audits = new Audits();
-//        audits.setAction("Save");
-//        audits.setTime("3:54");
-//        audits.setUsername("adminUser");
-//        audits.setRole("admin");
-//        audits.setEmail("admin@test.com");
-//        audits.setDate(new Date());
-//
-//        auditsService.insetLog(audits);
-//        System.out.println("Student Aspect.............hit");
-//
-//    }
+    @Before("execution( public * delete())")
+    public void beforeDelete() {
+
+        Audits audits = new Audits();
+        audits.setAction("delete");
+        audits.setTime("3:54");
+        audits.setUsername("adminUser");
+        audits.setRole("admin");
+        audits.setEmail("admin@test.com");
+        audits.setDate(new Date());
+        auditsService.save(audits);
+
+    }
 }

@@ -47,17 +47,17 @@ public class AuditsRepository implements AuditsService {
     }
 
     @Override
-    public Audits update(Audits t) {
+    public void update(Audits t) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Audits delete(int id) {
+    public void delete(Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Audits getById(int id) {
+    public Audits getById(Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

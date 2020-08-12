@@ -17,9 +17,9 @@ public interface IcommonService<T> {
 
     public List<T> viewAll();
 
-    public T update(T t);
+    public void update(T t);
 
-    public T delete(int id);
+    public void delete(Integer id);
 
-    public T getById(int id);
+    public T getById(Integer id);
 }

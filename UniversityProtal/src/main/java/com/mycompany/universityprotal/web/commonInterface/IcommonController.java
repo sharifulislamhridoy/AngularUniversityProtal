@@ -5,28 +5,31 @@
  */
 package com.mycompany.universityprotal.web.commonInterface;
 
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
  *
  * @author shari
  */
-public interface IcommonController <T> {
+public interface IcommonController<T> {
 
     public T create();
 
-    public T save(HttpServletRequest request);
+    public T save(T t);
 
     public ResponseEntity<T> edit(int id);
 
-    public ResponseEntity<T> update(HttpServletRequest request);
+    public ResponseEntity<T> update(Integer id,T t);
 
-    public ResponseEntity<T> getAll();
+    public List<T> getAll();
 
-    public ResponseEntity<T> delete(int id);
+    public ResponseEntity<T> delete(Integer id);
 
-    public ResponseEntity<T> getById(int id);
+    public ResponseEntity<T> getById(Integer id);
 
 }
