@@ -1,0 +1,13 @@
+com\mycompany\universityprotal\config\DBConfig.class
+com\mycompany\universityprotal\config\AppConfig.class
+com\mycompany\universityprotal\web\commonInterface\IcommonService.class
+com\mycompany\universityprotal\config\CORSFilter.class
+com\mycompany\universityprotal\config\AppInitializer.class
+com\mycompany\universityprotal\web\ImplementService\IauditsService.class
+com\mycompany\universityprotal\service\AuditsService.class
+com\mycompany\universityprotal\controller\IndexController.class
+com\mycompany\universityprotal\web\commonInterface\IcommonRepository.class
+com\mycompany\universityprotal\aspact\StudentAspact.class
+com\mycompany\universityprotal\model\Audits.class
+com\mycompany\universityprotal\controller\AuditsController.class
+com\mycompany\universityprotal\repository\AuditsRepository.class
